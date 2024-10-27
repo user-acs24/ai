@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: update-leader
+spec:
+  schedule: "*/1 * * * *"  # Run every minute
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: update-leader
+            image: nanthan26/update-leader:latest
+          restartPolicy: OnFailure

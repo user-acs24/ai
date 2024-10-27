@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-leader-app
+  labels:
+    app: ai-leader
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ai-leader
+  template:
+    metadata:
+      labels:
+        app: ai-leader
+    spec:
+      containers:
+      - name: ai-leader-app
+        image: nanthan26/ai-leader-election:latest  # Ensure this matches your updated image
+        ports:
+        - containerPort: 80
