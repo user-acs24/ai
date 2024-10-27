@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: ai-leader-app
-        image: nanthan26/ai-leader-election:latest  # Ensure this matches your updated image
+        image: acs23/ai-leader-election:latest  # Ensure this matches your updated image
         ports:
         - containerPort: 80
