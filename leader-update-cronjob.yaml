@@ -10,5 +10,5 @@ spec:
         spec:
           containers:
           - name: update-leader
-            image: nanthan26/update-leader:latest
+            image: acs23/update-leader:latest
           restartPolicy: OnFailure
